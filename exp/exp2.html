@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    <h1>JS Experimentation - Functions & DOM</h1>
+    <script>
+     // This program tells you how old you are and gives age-based messages and changes the background randomly. 
+
+    function getYear() {
+        var year = prompt("What year were you born?");
+        return year;
+        }
+
+    function calculateAge(birthYear) {
+        var age = 2026 - birthYear;
+        return age;
+        }
+
+    function getAgeMessage(age) {
+        var messages = ["You don't exist!", "You're a kid!", "You're a teen!", "You're an adult!", "You're wise!", "You are not mortal"];
+        var message;
+    
+        if (age < 0) {
+        message = messages[0];
+    } 
+        else if (age < 13) {
+        message = messages[1];
+    } 
+        else if (age < 20) {
+        message = messages[2];
+    } 
+        else if (age < 60) {
+        message = messages[3];
+    } else if (age <= 122) {
+        message = messages[4];
+    } 
+        else {
+        message = messages[5];
+    }
+    
+    return message;
+}
+
+
+    function displayResults(age, message) {
+        var colors = ["lightblue", "lightgreen", "lightyellow", "lightpink", "lightgold"];
+    //Still a little confused on this part, since I had to look at some techniques that other people had used to get a random array.
+        var randomIndex = Math.floor(Math.random() * colors.length);
+        for (var i = 0; i < colors.length; i++) {
+            if (i === randomIndex) {
+                document.body.style.backgroundColor = colors[i];
+            }
+        }
+    
+        var result = document.createElement("h1");
+            result.innerHTML = "You are " + age + " years old!";
+            document.body.appendChild(result);
+    
+        var messageElement = document.createElement("h2");
+            messageElement.innerHTML = message;
+            document.body.appendChild(messageElement);
+    }
+
+        var birthYear = getYear();
+        var userAge = calculateAge(birthYear);
+        var ageMessage = getAgeMessage(userAge);
+            displayResults(userAge, ageMessage);
+    </script>
+</body>
+</html>

@@ -3,16 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-.cal-sans-regular {
-  font-family: "Cal Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background: #205373;
-    color: #2c3e50;
     line-height: 1.6;
     background-image: url('images/tracksketch.svg');
     background-size: 100%;
@@ -75,8 +69,6 @@ section {
 }
 
 #madlib-answer {
-    margin-top: 0;
-    clear: both;
     display: none;
 }
 
@@ -141,16 +133,8 @@ input[type="text"]:focus {
     background: #34495e;
 }
 
-article {
-    padding: 0;
-}
-
-article h2 {
-    margin-bottom: 20px;
-}
-
 p {
     color: #1a1a1a;
-    font-size: 2em;
+    font-size: 4em;
     line-height: 1.9;
 }

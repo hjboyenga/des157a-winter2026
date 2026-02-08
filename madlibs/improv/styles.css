@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #205373;
+    line-height: 1.6;
+    background-image: url('images/tracksketch.svg');
+    background-size: 100%;
+    background-position: top -10vh center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: "Cal Sans", sans-serif;
+    color: #F2D8A7;
+    font-size: 8rem;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    animation: slideInBounce 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    text-shadow: 
+        -2px -2px 4px rgba(140, 58, 58, 0.8),
+        2px -2px 4px rgba(140, 58, 58, 0.8),
+        -2px 2px 4px rgba(140, 58, 58, 0.8),
+        2px 2px 4px rgba(140, 58, 58, 0.8);
+}
+
+
+@keyframes slideInBounce {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+main {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+section {
+    background-color: #F2D8A7;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#madlib-questions {
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+#madlib-answer {
+    display: none;
+}
+
+h2 {
+    color: #1a1a1a;
+    font-family: "Cal Sans", sans-serif;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+form {
+    display: grid;
+    gap: 25px;
+}
+
+label {
+    color: #1a1a1a;
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/*Still messing around with this stuff I found online*/
+input[type="text"] {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #1a1a1a;
+    font-size: 1em;
+    transition: 0.3s ease;
+    background: transparent;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-bottom-color: #1a1a1a;
+}
+
+#submit-btn {
+    background: #205373;
+    color: white;
+    padding: 15px 40px;
+    font-size: 0.9em;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#submit-btn:hover {
+    background: #1a252f;
+}
+
+#submit-btn:active {
+    background: #34495e;
+}
+#reset-btn {
+    background: #8C3A3A;
+    color: white;
+    padding: 15px 40px;
+    font-size: 0.9em;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#reset-btn:hover {
+    background: #6b2d2d;
+}
+
+#reset-btn:active {
+    background: #4a1f1f;
+}
+p {
+    color: #1a1a1a;
+    font-size: 4em;
+    line-height: 1.9;
+}
+

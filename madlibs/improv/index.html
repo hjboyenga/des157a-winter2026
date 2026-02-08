@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadLibs v1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Track Star</h1>
+    </header>
+    <main>
+        <section id="madlib-questions">
+        <h2>Enter your answers here!</h2>
+            <form>
+                <label for="yourFirstName">Your First Name:</label>
+                    <input type="text" id="yourFirstName">
+
+                <label for="adj1">Adjective: (describes something - ex: spooky, bright, weird)</label>
+                    <input type="text" id="adj1">
+
+                <label for="verb1">Verb: (an action word - ex: dance, whisper, jump)</label>
+                    <input type="text" id="verb1">
+
+                <label for="animal">Animal: (ex: zebra, dolphin, dragon)</label>
+                    <input type="text" id="animal">
+
+                <label for="adj2">Adjective: (describes something - ex: sparkly, mysterious, chaotic)</label>
+                    <input type="text" id="adj2">
+
+                <label for="noun">Noun: (a person, place, or thing - ex: rocket, tornado, pancake)</label>
+                    <input type="text" id="noun">
+
+                <label for="thingNoun">"Thing" Noun: (an object you can hold - ex: spatula, tambourine, rubber duck)</label>
+                    <input type="text" id="thingNoun">
+
+                <label for="verbing">Verb Ending in-ing: (ex: dancing, screaming, backflipping)</label>
+                    <input type="text" id="verbing">
+
+                <button type="button" id="submit-btn">Generate Story</button>
+                <button type="button" id="reset-btn">Reset</button>
+            </form>
+        </section>
+        <section id ="madlib-answer">
+            <article>
+            
+            </article>
+        </section>
+    </main>
+    
+</body>
+</html>

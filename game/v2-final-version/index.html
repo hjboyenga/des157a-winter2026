@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running World The Game</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer> </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <audio id="sound-running" src="audio/runningSound8Bit.mp3"></audio>
+  <audio id="sound-win" src="audio/victoryTheme.mp3"></audio>
+  <audio id="sound-bg" src="audio/backgroundMusic.mp3" loop></audio>
+
+  <!--SPLASH SCREEN-->
+  <div id="splash-screen" class="screen active">
+    <div class="splash-content">
+      <p class="splash-title">RUNNING WORLD</p>
+      <p class="splash-blink">— INSERT COIN —</p>
+      <p class="splash-sub">CLICK ANYWHERE TO START</p>
+    </div>
+  </div>
+
+  <!--HOME SCREEN-->
+  <div id="home-screen" class="screen">
+    <div class="sky">
+      <img class="cloud cloud1" src="images/pixels-clouds.png" alt="cloud" />
+      <img class="cloud cloud2" src="images/pixels-clouds.png" alt="cloud" />
+      <h1 class="title">Running World<br><span>The Game</span></h1>
+    </div>
+
+    <div class="ground-area">
+      <div class="track">
+        <div class="lane">
+          
+          <img class="runner" id="preview-runner1" src="images/blueStandingMan.svg" alt="Player 1" />
+        </div>
+        <div class="lane">
+          <img class="runner" id="preview-runner2" src="images/redStandingMan.svg" alt="Player 2" />
+        </div>
+        <div class="finish-line">
+        </div>
+      </div>
+    </div>
+
+    <div class="rules-box">
+      <p class="rules-title">HOW TO PLAY</p>
+      <ul class="rules-list">
+        <li>Take turns rolling 2 dice each round.</li>
+        <li>Add your roll to your score and move forward.</li>
+        <li>Roll a <span class="rules-highlight">1</span> on either die - Cramp! Turn over, no points!</li>
+        <li>Roll <span class="rules-highlight">(1+1)</span> False Start: Back to the Blocks! - your score resets to zero!</li>
+        <li>First player to reach <span class="rules-highlight">40 points</span> wins the race!</li>
+      </ul>
+    </div>
+    <button id="start-btn" class="btn-main">Start Game</button>
+  <footer>
+  <a href="sources.html"><button class="btn-source">Sources</button></a>
+  </footer>
+
+  </div>
+
+  <!--NAME ENTRY SCREEN-->
+  <div id="name-screen" class="screen">
+
+    <div class="sky small-sky">
+      <h2 class="subtitle">Enter Player Names</h2>
+    </div>
+
+    <div class="name-form-area">
+
+      <div class="name-field">
+        <label for="name1">Player 1 Name:</label>
+        <input type="text" id="name1" maxlength="12" placeholder="Runner 1" />
+      </div>
+
+      <div class="name-field">
+        <label for="name2">Player 2 Name:</label>
+        <input type="text" id="name2" maxlength="12" placeholder="Runner 2" />
+      </div>
+
+      <button id="play-btn" class="btn-main">Let's Race!</button>
+
+    </div>
+
+  </div>
+
+
+  <!--GAME SCREEN-->
+  <div id="game-screen" class="screen">
+
+    <div class="sky small-sky">
+      <img class="cloud cloud3" src="images/pixels-clouds.png" alt="cloud" />
+
+      <div class="scoreboard">
+        <div class="score-panel" id="score-panel-1">
+          <span class="score-name" id="p1-name-label">Player 1</span>
+          <span class="score-val"  id="p1-score">0</span>
+          <span class="score-sub">pts</span>
+        </div>
+
+        <div class="turn-indicator" id="turn-indicator">Player 1's Turn</div>
+
+        <div class="score-panel" id="score-panel-2">
+          <span class="score-name" id="p2-name-label">Player 2</span>
+          <span class="score-val"  id="p2-score">0</span>
+          <span class="score-sub">pts</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ground-area">
+      <div class="track game-track">
+
+        <div class="lane">
+          <!--runner1-still.jpg = the still image (shown when not moving)
+            runner1-run.gif = the animated GIF (shown while moving)
+            JavaScript swaps between these two automatically.-->
+          <img class="runner game-runner" id="runner1" src="images/blueStandingMan.svg" alt="Player 1" />
+          <span class="runner-label" id="r1-label">P1</span>
+        </div>
+
+        <div class="lane">
+          <!--Same idea for Player 2 — swap src between still and GIF.-->
+          <img class="runner game-runner" id="runner2" src="images/redStandingMan.svg" alt="Player 2" />
+          <span class="runner-label" id="r2-label">P2</span>
+        </div>
+
+        <div class="finish-line">
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="dice-area">
+      <div class="die-wrap">
+        <img class="die" id="die1" src="images/die1.svg" alt="Die 1" />
+        <span class="die-label">Die 1</span>
+      </div>
+
+      <p class="roll-result" id="roll-result">Roll the dice!</p>
+
+      <div class="die-wrap">
+        <img class="die" id="die2" src="images/die2.svg" alt="Die 2" />
+        <span class="die-label">Die 2</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="roll-btn" class="btn-game btn-roll">Roll</button>
+    </div>
+
+    <p class="message-box" id="message-box"></p>
+
+  </div>
+
+  <!--WIN SCREEN-->
+  <div id="win-screen" class="screen">
+    <div class="win-content">
+      <img class="win-trophy" src="images/trophy-win.png" alt="Trophy" />
+      <h2 class="win-title" id="win-title">Player 1 Wins!</h2>
+      <p  class="win-sub"   id="win-sub">Crossed the finish line!</p>
+      <button id="restart-btn" class="btn-main">Play Again</button>
+    </div>
+  </div>
+
+</body>
+</html>

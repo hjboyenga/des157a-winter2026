@@ -352,6 +352,7 @@ a {
 .btn-main:active { transform: translate(4px, 4px); box-shadow: 1px 1px 0 black; }
 
 .btn-source {
+  display: inline-block;
   font-family: 'Press Start 2P', monospace;
   font-size: 10px;
   background-color: #7a2c00;

@@ -28,19 +28,18 @@
   <!--HOME SCREEN-->
   <div id="home-screen" class="screen">
     <div class="sky">
-      <img class="cloud cloud1" src="images/pixels-clouds.png" alt="cloud" />
-      <img class="cloud cloud2" src="images/pixels-clouds.png" alt="cloud" />
+      <img class="cloud cloud1" src="images/pixels-clouds.png" alt="cloud">
+      <img class="cloud cloud2" src="images/pixels-clouds.png" alt="cloud">
       <h1 class="title">Running World<br><span>The Game</span></h1>
     </div>
 
     <div class="ground-area">
       <div class="track">
         <div class="lane">
-          
-          <img class="runner" id="preview-runner1" src="images/blueStandingMan.svg" alt="Player 1" />
+          <img class="runner" id="preview-runner1" src="images/blueStandingMan.svg" alt="Player 1">
         </div>
         <div class="lane">
-          <img class="runner" id="preview-runner2" src="images/redStandingMan.svg" alt="Player 2" />
+          <img class="runner" id="preview-runner2" src="images/redStandingMan.svg" alt="Player 2">
         </div>
         <div class="finish-line">
         </div>
@@ -59,7 +58,7 @@
     </div>
     <button id="start-btn" class="btn-main">Start Game</button>
   <footer>
-  <a href="sources.html"><button class="btn-source">Sources</button></a>
+    <a href="sources.html" class="btn-source">Sources</a>
   </footer>
 
   </div>
@@ -75,12 +74,12 @@
 
       <div class="name-field">
         <label for="name1">Player 1 Name:</label>
-        <input type="text" id="name1" maxlength="12" placeholder="Runner 1" />
+        <input type="text" id="name1" maxlength="12" placeholder="Runner 1">
       </div>
 
       <div class="name-field">
         <label for="name2">Player 2 Name:</label>
-        <input type="text" id="name2" maxlength="12" placeholder="Runner 2" />
+        <input type="text" id="name2" maxlength="12" placeholder="Runner 2">
       </div>
 
       <button id="play-btn" class="btn-main">Let's Race!</button>
@@ -94,7 +93,7 @@
   <div id="game-screen" class="screen">
 
     <div class="sky small-sky">
-      <img class="cloud cloud3" src="images/pixels-clouds.png" alt="cloud" />
+      <img class="cloud cloud3" src="images/pixels-clouds.png" alt="cloud">
 
       <div class="scoreboard">
         <div class="score-panel" id="score-panel-1">
@@ -117,16 +116,12 @@
       <div class="track game-track">
 
         <div class="lane">
-          <!--runner1-still.jpg = the still image (shown when not moving)
-            runner1-run.gif = the animated GIF (shown while moving)
-            JavaScript swaps between these two automatically.-->
-          <img class="runner game-runner" id="runner1" src="images/blueStandingMan.svg" alt="Player 1" />
+          <img class="runner game-runner" id="runner1" src="images/blueStandingMan.svg" alt="Player 1">
           <span class="runner-label" id="r1-label">P1</span>
         </div>
 
         <div class="lane">
-          <!--Same idea for Player 2 — swap src between still and GIF.-->
-          <img class="runner game-runner" id="runner2" src="images/redStandingMan.svg" alt="Player 2" />
+          <img class="runner game-runner" id="runner2" src="images/redStandingMan.svg" alt="Player 2">
           <span class="runner-label" id="r2-label">P2</span>
         </div>
 
@@ -139,14 +134,14 @@
 
     <div class="dice-area">
       <div class="die-wrap">
-        <img class="die" id="die1" src="images/die1.svg" alt="Die 1" />
+        <img class="die" id="die1" src="images/die1.svg" alt="Die 1">
         <span class="die-label">Die 1</span>
       </div>
 
       <p class="roll-result" id="roll-result">Roll the dice!</p>
 
       <div class="die-wrap">
-        <img class="die" id="die2" src="images/die2.svg" alt="Die 2" />
+        <img class="die" id="die2" src="images/die2.svg" alt="Die 2">
         <span class="die-label">Die 2</span>
       </div>
     </div>
@@ -162,7 +157,7 @@
   <!--WIN SCREEN-->
   <div id="win-screen" class="screen">
     <div class="win-content">
-      <img class="win-trophy" src="images/trophy-win.png" alt="Trophy" />
+      <img class="win-trophy" src="images/trophy-win.png" alt="Trophy">
       <h2 class="win-title" id="win-title">Player 1 Wins!</h2>
       <p  class="win-sub"   id="win-sub">Crossed the finish line!</p>
       <button id="restart-btn" class="btn-main">Play Again</button>

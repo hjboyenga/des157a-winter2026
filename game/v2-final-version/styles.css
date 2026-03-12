@@ -78,7 +78,7 @@ a {
 
 @keyframes drift {
   from { transform: translateX(0); }
-  to   { transform: translateX(110vw); }
+  to { transform: translateX(110vw); }
 }
 
 
@@ -177,7 +177,7 @@ a {
 
 @keyframes bounce {
   from { transform: translateY(-60%); }
-  to   { transform: translateY(-40%); }
+  to { transform: translateY(-40%); }
 }
 
 .runner-label {
@@ -273,7 +273,7 @@ a {
 
 @keyframes spin {
   from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  to { transform: rotate(360deg); }
 }
 
 .die-label {
@@ -348,7 +348,7 @@ a {
   transition: background-color 0.15s, transform 0.08s, box-shadow 0.08s;
 }
 
-.btn-main:hover  { background-color: #a33c00; }
+.btn-main:hover { background-color: #a33c00; }
 .btn-main:active { transform: translate(4px, 4px); box-shadow: 1px 1px 0 black; }
 
 .btn-source {
@@ -366,7 +366,7 @@ a {
   transition: background-color 0.15s, transform 0.08s, box-shadow 0.08s;
 }
 
-.btn-source:hover  { background-color: #a33c00; }
+.btn-source:hover { background-color: #a33c00; }
 .btn-source:active { transform: translate(4px, 4px); box-shadow: 1px 1px 0 black; }
 
 /* MESSAGE BOX */
@@ -445,7 +445,7 @@ a {
 
 @keyframes pop {
   from { transform: scale(0); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 .win-title {
@@ -500,7 +500,7 @@ a {
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
+  50% { opacity: 0; }
 }
 
 /* RULES BOX */
